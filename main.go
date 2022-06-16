@@ -7,8 +7,10 @@ import (
 
 var wg sync.WaitGroup
 
+const helloCount = 20
+
 func main() {
-	for i := 0; i < 10; i++ {
+	for i := 0; i < helloCount; i++ {
 		wg.Add(1)
 		go sayHello(i)
 	}
